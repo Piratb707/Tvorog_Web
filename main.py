@@ -2,7 +2,9 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-menu = ["Установка","Первое приложение","Обратная связь"]
+menu = [{"name":"Наши работы","url": "our_works"},
+        {"name": "О нас", "url":"about_us"},
+        {"name": "Обратна связь", "url":"call_us"}]
 
 @app.route("/")
 def index_page():
